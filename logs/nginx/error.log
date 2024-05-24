@@ -1,0 +1,208 @@
+2024/05/24 13:46:51 [emerg] 1#1: unknown "app_container_name_ads" variable
+2024/05/24 13:46:51 [emerg] 1#1: unknown "app_container_name_ads" variable
+2024/05/24 13:46:51 [emerg] 1#1: unknown "app_container_name_ads" variable
+2024/05/24 13:46:52 [emerg] 1#1: unknown "app_container_name_ads" variable
+2024/05/24 13:46:53 [emerg] 1#1: unknown "app_container_name_ads" variable
+2024/05/24 13:46:54 [emerg] 1#1: unknown "app_container_name_ads" variable
+2024/05/24 13:46:58 [emerg] 1#1: unknown "app_container_name_ads" variable
+2024/05/24 13:47:04 [emerg] 1#1: unknown "app_container_name_ads" variable
+2024/05/24 13:47:17 [emerg] 1#1: unknown "app_container_name_ads" variable
+2024/05/24 13:52:32 [notice] 1#1: using the "epoll" event method
+2024/05/24 13:52:32 [notice] 1#1: nginx/1.25.5
+2024/05/24 13:52:32 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2024/05/24 13:52:32 [notice] 1#1: OS: Linux 6.6.26-linuxkit
+2024/05/24 13:52:32 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/05/24 13:52:32 [notice] 1#1: start worker processes
+2024/05/24 13:52:32 [notice] 1#1: start worker process 9
+2024/05/24 13:52:32 [notice] 1#1: start worker process 10
+2024/05/24 13:52:32 [notice] 1#1: start worker process 11
+2024/05/24 13:52:32 [notice] 1#1: start worker process 12
+2024/05/24 13:52:32 [notice] 1#1: start worker process 13
+2024/05/24 13:52:32 [notice] 1#1: start worker process 14
+2024/05/24 13:52:32 [notice] 1#1: start worker process 15
+2024/05/24 13:52:32 [notice] 1#1: start worker process 16
+2024/05/24 13:52:47 [error] 9#9: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2024/05/24 13:52:47 [error] 9#9: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost", referrer: "http://localhost/"
+2024/05/24 13:54:06 [notice] 1#1: using the "epoll" event method
+2024/05/24 13:54:06 [notice] 1#1: nginx/1.25.5
+2024/05/24 13:54:06 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2024/05/24 13:54:06 [notice] 1#1: OS: Linux 6.6.26-linuxkit
+2024/05/24 13:54:06 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/05/24 13:54:06 [notice] 1#1: start worker processes
+2024/05/24 13:54:06 [notice] 1#1: start worker process 8
+2024/05/24 13:54:06 [notice] 1#1: start worker process 9
+2024/05/24 13:54:06 [notice] 1#1: start worker process 10
+2024/05/24 13:54:06 [notice] 1#1: start worker process 11
+2024/05/24 13:54:06 [notice] 1#1: start worker process 12
+2024/05/24 13:54:06 [notice] 1#1: start worker process 13
+2024/05/24 13:54:06 [notice] 1#1: start worker process 14
+2024/05/24 13:54:06 [notice] 1#1: start worker process 15
+2024/05/24 13:55:57 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2024/05/24 13:56:08 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2024/05/24 13:57:05 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/05/24 13:57:05 [notice] 8#8: gracefully shutting down
+2024/05/24 13:57:05 [notice] 12#12: gracefully shutting down
+2024/05/24 13:57:05 [notice] 8#8: exiting
+2024/05/24 13:57:05 [notice] 9#9: gracefully shutting down
+2024/05/24 13:57:05 [notice] 11#11: gracefully shutting down
+2024/05/24 13:57:05 [notice] 10#10: gracefully shutting down
+2024/05/24 13:57:05 [notice] 14#14: gracefully shutting down
+2024/05/24 13:57:05 [notice] 10#10: exiting
+2024/05/24 13:57:05 [notice] 15#15: gracefully shutting down
+2024/05/24 13:57:05 [notice] 13#13: gracefully shutting down
+2024/05/24 13:57:05 [notice] 12#12: exiting
+2024/05/24 13:57:05 [notice] 8#8: exit
+2024/05/24 13:57:05 [notice] 9#9: exiting
+2024/05/24 13:57:05 [notice] 11#11: exiting
+2024/05/24 13:57:05 [notice] 14#14: exiting
+2024/05/24 13:57:05 [notice] 10#10: exit
+2024/05/24 13:57:05 [notice] 15#15: exiting
+2024/05/24 13:57:05 [notice] 13#13: exiting
+2024/05/24 13:57:05 [notice] 12#12: exit
+2024/05/24 13:57:05 [notice] 9#9: exit
+2024/05/24 13:57:05 [notice] 11#11: exit
+2024/05/24 13:57:05 [notice] 14#14: exit
+2024/05/24 13:57:05 [notice] 15#15: exit
+2024/05/24 13:57:05 [notice] 13#13: exit
+2024/05/24 13:57:05 [notice] 1#1: signal 17 (SIGCHLD) received from 12
+2024/05/24 13:57:05 [notice] 1#1: worker process 12 exited with code 0
+2024/05/24 13:57:05 [notice] 1#1: worker process 14 exited with code 0
+2024/05/24 13:57:05 [notice] 1#1: worker process 15 exited with code 0
+2024/05/24 13:57:05 [notice] 1#1: signal 29 (SIGIO) received
+2024/05/24 13:57:05 [notice] 1#1: signal 17 (SIGCHLD) received from 8
+2024/05/24 13:57:05 [notice] 1#1: worker process 8 exited with code 0
+2024/05/24 13:57:05 [notice] 1#1: worker process 9 exited with code 0
+2024/05/24 13:57:05 [notice] 1#1: worker process 10 exited with code 0
+2024/05/24 13:57:05 [notice] 1#1: worker process 11 exited with code 0
+2024/05/24 13:57:05 [notice] 1#1: worker process 13 exited with code 0
+2024/05/24 13:57:05 [notice] 1#1: exit
+2024/05/24 13:57:07 [notice] 1#1: using the "epoll" event method
+2024/05/24 13:57:07 [notice] 1#1: nginx/1.25.5
+2024/05/24 13:57:07 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2024/05/24 13:57:07 [notice] 1#1: OS: Linux 6.6.26-linuxkit
+2024/05/24 13:57:07 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/05/24 13:57:07 [notice] 1#1: start worker processes
+2024/05/24 13:57:07 [notice] 1#1: start worker process 8
+2024/05/24 13:57:07 [notice] 1#1: start worker process 9
+2024/05/24 13:57:07 [notice] 1#1: start worker process 10
+2024/05/24 13:57:07 [notice] 1#1: start worker process 11
+2024/05/24 13:57:07 [notice] 1#1: start worker process 12
+2024/05/24 13:57:07 [notice] 1#1: start worker process 13
+2024/05/24 13:57:07 [notice] 1#1: start worker process 14
+2024/05/24 13:57:07 [notice] 1#1: start worker process 15
+2024/05/24 13:57:12 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2024/05/24 13:57:14 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2024/05/24 13:57:57 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2024/05/24 13:57:58 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET /api HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2024/05/24 13:58:29 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET /api HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2024/05/24 13:58:29 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2024/05/24 13:58:36 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/05/24 13:58:36 [notice] 8#8: gracefully shutting down
+2024/05/24 13:58:36 [notice] 11#11: gracefully shutting down
+2024/05/24 13:58:36 [notice] 14#14: gracefully shutting down
+2024/05/24 13:58:36 [notice] 9#9: gracefully shutting down
+2024/05/24 13:58:36 [notice] 10#10: gracefully shutting down
+2024/05/24 13:58:36 [notice] 13#13: gracefully shutting down
+2024/05/24 13:58:36 [notice] 12#12: gracefully shutting down
+2024/05/24 13:58:36 [notice] 15#15: gracefully shutting down
+2024/05/24 13:58:36 [notice] 8#8: exiting
+2024/05/24 13:58:36 [notice] 11#11: exiting
+2024/05/24 13:58:36 [notice] 8#8: exit
+2024/05/24 13:58:36 [notice] 14#14: exiting
+2024/05/24 13:58:36 [notice] 9#9: exiting
+2024/05/24 13:58:36 [notice] 10#10: exiting
+2024/05/24 13:58:36 [notice] 13#13: exiting
+2024/05/24 13:58:36 [notice] 12#12: exiting
+2024/05/24 13:58:36 [notice] 15#15: exiting
+2024/05/24 13:58:36 [notice] 11#11: exit
+2024/05/24 13:58:36 [notice] 14#14: exit
+2024/05/24 13:58:36 [notice] 9#9: exit
+2024/05/24 13:58:36 [notice] 10#10: exit
+2024/05/24 13:58:36 [notice] 13#13: exit
+2024/05/24 13:58:36 [notice] 12#12: exit
+2024/05/24 13:58:36 [notice] 15#15: exit
+2024/05/24 13:58:36 [notice] 1#1: signal 17 (SIGCHLD) received from 11
+2024/05/24 13:58:36 [notice] 1#1: worker process 8 exited with code 0
+2024/05/24 13:58:36 [notice] 1#1: worker process 9 exited with code 0
+2024/05/24 13:58:36 [notice] 1#1: worker process 10 exited with code 0
+2024/05/24 13:58:36 [notice] 1#1: worker process 11 exited with code 0
+2024/05/24 13:58:36 [notice] 1#1: worker process 12 exited with code 0
+2024/05/24 13:58:36 [notice] 1#1: worker process 13 exited with code 0
+2024/05/24 13:58:36 [notice] 1#1: worker process 14 exited with code 0
+2024/05/24 13:58:36 [notice] 1#1: worker process 15 exited with code 0
+2024/05/24 13:58:36 [notice] 1#1: exit
+2024/05/24 13:58:48 [notice] 1#1: using the "epoll" event method
+2024/05/24 13:58:48 [notice] 1#1: nginx/1.25.5
+2024/05/24 13:58:48 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2024/05/24 13:58:48 [notice] 1#1: OS: Linux 6.6.26-linuxkit
+2024/05/24 13:58:48 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/05/24 13:58:48 [notice] 1#1: start worker processes
+2024/05/24 13:58:48 [notice] 1#1: start worker process 8
+2024/05/24 13:58:48 [notice] 1#1: start worker process 9
+2024/05/24 13:58:48 [notice] 1#1: start worker process 10
+2024/05/24 13:58:48 [notice] 1#1: start worker process 11
+2024/05/24 13:58:48 [notice] 1#1: start worker process 12
+2024/05/24 13:58:48 [notice] 1#1: start worker process 13
+2024/05/24 13:58:48 [notice] 1#1: start worker process 14
+2024/05/24 13:58:48 [notice] 1#1: start worker process 15
+2024/05/24 13:58:54 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2024/05/24 13:58:55 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2024/05/24 13:58:56 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2024/05/24 13:59:06 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost"
+2024/05/24 14:07:30 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/05/24 14:07:30 [notice] 9#9: gracefully shutting down
+2024/05/24 14:07:30 [notice] 11#11: gracefully shutting down
+2024/05/24 14:07:30 [notice] 10#10: gracefully shutting down
+2024/05/24 14:07:30 [notice] 13#13: gracefully shutting down
+2024/05/24 14:07:30 [notice] 12#12: gracefully shutting down
+2024/05/24 14:07:30 [notice] 15#15: gracefully shutting down
+2024/05/24 14:07:30 [notice] 8#8: gracefully shutting down
+2024/05/24 14:07:30 [notice] 8#8: exiting
+2024/05/24 14:07:30 [notice] 14#14: gracefully shutting down
+2024/05/24 14:07:30 [notice] 14#14: exiting
+2024/05/24 14:07:30 [notice] 9#9: exiting
+2024/05/24 14:07:30 [notice] 11#11: exiting
+2024/05/24 14:07:30 [notice] 10#10: exiting
+2024/05/24 14:07:30 [notice] 13#13: exiting
+2024/05/24 14:07:30 [notice] 12#12: exiting
+2024/05/24 14:07:30 [notice] 15#15: exiting
+2024/05/24 14:07:30 [notice] 15#15: exit
+2024/05/24 14:07:30 [notice] 8#8: exit
+2024/05/24 14:07:30 [notice] 14#14: exit
+2024/05/24 14:07:30 [notice] 9#9: exit
+2024/05/24 14:07:30 [notice] 11#11: exit
+2024/05/24 14:07:30 [notice] 10#10: exit
+2024/05/24 14:07:30 [notice] 13#13: exit
+2024/05/24 14:07:30 [notice] 12#12: exit
+2024/05/24 14:07:30 [notice] 1#1: signal 17 (SIGCHLD) received from 9
+2024/05/24 14:07:30 [notice] 1#1: worker process 9 exited with code 0
+2024/05/24 14:07:30 [notice] 1#1: signal 29 (SIGIO) received
+2024/05/24 14:07:30 [notice] 1#1: signal 17 (SIGCHLD) received from 11
+2024/05/24 14:07:30 [notice] 1#1: worker process 8 exited with code 0
+2024/05/24 14:07:30 [notice] 1#1: worker process 11 exited with code 0
+2024/05/24 14:07:30 [notice] 1#1: worker process 14 exited with code 0
+2024/05/24 14:07:30 [notice] 1#1: signal 29 (SIGIO) received
+2024/05/24 14:07:30 [notice] 1#1: signal 17 (SIGCHLD) received from 8
+2024/05/24 14:07:30 [notice] 1#1: signal 17 (SIGCHLD) received from 10
+2024/05/24 14:07:30 [notice] 1#1: worker process 10 exited with code 0
+2024/05/24 14:07:30 [notice] 1#1: worker process 12 exited with code 0
+2024/05/24 14:07:30 [notice] 1#1: worker process 15 exited with code 0
+2024/05/24 14:07:30 [notice] 1#1: signal 29 (SIGIO) received
+2024/05/24 14:07:30 [notice] 1#1: signal 17 (SIGCHLD) received from 15
+2024/05/24 14:07:30 [notice] 1#1: signal 17 (SIGCHLD) received from 13
+2024/05/24 14:07:30 [notice] 1#1: worker process 13 exited with code 0
+2024/05/24 14:07:30 [notice] 1#1: exit
+2024/05/24 14:12:10 [notice] 1#1: using the "epoll" event method
+2024/05/24 14:12:10 [notice] 1#1: nginx/1.25.5
+2024/05/24 14:12:10 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2024/05/24 14:12:10 [notice] 1#1: OS: Linux 6.6.26-linuxkit
+2024/05/24 14:12:10 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/05/24 14:12:10 [notice] 1#1: start worker processes
+2024/05/24 14:12:10 [notice] 1#1: start worker process 7
+2024/05/24 14:12:10 [notice] 1#1: start worker process 8
+2024/05/24 14:12:10 [notice] 1#1: start worker process 9
+2024/05/24 14:12:10 [notice] 1#1: start worker process 10
+2024/05/24 14:12:10 [notice] 1#1: start worker process 11
+2024/05/24 14:12:10 [notice] 1#1: start worker process 12
+2024/05/24 14:12:10 [notice] 1#1: start worker process 13
+2024/05/24 14:12:10 [notice] 1#1: start worker process 14

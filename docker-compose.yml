@@ -5,8 +5,8 @@ services:
     build: .
     volumes:
       - ./laravel-app:/var/www/html
-    ports:
-      - 9000:80
+    networks:
+      - ads_services
   
   mysql_db:
     image: mysql:latest
@@ -15,6 +15,8 @@ services:
       MYSQL_DATABASE: taravel_docker
     ports:
     - 3306:3306
+    networks:
+    - ads_services
   
   phpmyadmin:
     image: phpmyadmin:latest
@@ -22,3 +24,31 @@ services:
       - 9001:80
     environment:
       - PMA_ARBITRARY=1
+    networks:
+      - ads_services
+      
+  #Nginx webserver Service
+  webserver:
+    image: ${NGINX_VERSION}
+    restart: always
+    tty: true
+    ports:
+      - "${APP_PORT_ADS}:${APP_PORT_ADS_EXTERNAL}"
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./logs/nginx:/var/log/nginx
+      - ./laravel-app:/var/www/html
+    environment:
+      - APP_PORT_ADS_EXTERNAL=${APP_PORT_ADS_EXTERNAL}
+      - APP_CONTAINER_NAME=${APP_CONTAINER_NAME}
+      # импортим переменные из блока выше которые объявлены у нас в .env, говорим envsubst, что меняем только те которые мы указали, остальные игнорим.
+    command: /bin/bash -c "envsubst '$${APP_PORT_ADS_EXTERNAL} $${APP_CONTAINER_NAME}' < /etc/nginx/conf.d/web_app.conf.template > /etc/nginx/conf.d/web_app.conf && nginx -g 'daemon off;'"
+    networks:
+      - ads_services
+      
+  #Docker Networks
+networks:
+  ads_services:
+    driver: bridge
+
+
