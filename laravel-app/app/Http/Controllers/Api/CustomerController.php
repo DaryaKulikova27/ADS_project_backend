@@ -28,17 +28,30 @@ class CustomerController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
     public function store(StoreCustomerRequest $request)
     {
         //
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified customer.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
-    public function show(Customer $customer)
+    public function show($id)
     {
-        //
+        // Ищем клиента по идентификатору
+        $customer = Customer::find($id);
+
+        // Проверяем, найден ли клиент
+        if (!$customer) {
+            return response()->json(['message' => 'Customer not found'], 404);
+        }
+
+        // Возвращаем информацию о клиенте
+        return response()->json($customer, 200);
     }
 
     /**

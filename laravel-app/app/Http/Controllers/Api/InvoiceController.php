@@ -14,7 +14,7 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        //
+        return Invoice::all();
     }
 
     /**
@@ -34,11 +34,23 @@ class InvoiceController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified customer.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
-    public function show(Invoice $invoice)
+    public function show($id)
     {
-        //
+        // Ищем клиента по идентификатору
+        $invoice = Invoice::find($id);
+
+        // Проверяем, найден ли клиент
+        if (!$invoice) {
+            return response()->json(['message' => 'Invoice not found'], 404);
+        }
+
+        // Возвращаем информацию о квитанции
+        return response()->json($invoice, 200);
     }
 
     /**
