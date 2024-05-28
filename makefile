@@ -15,3 +15,5 @@ data:
 	docker exec laravel-docker bash -c "php artisan db:seed"
 fresh-data:
 	docker exec laravel-docker bash -c "php artisan migrate:fresh --seed"
+clean:
+	docker exec laravel-docker bash -c "php artisan optimize:clear"
