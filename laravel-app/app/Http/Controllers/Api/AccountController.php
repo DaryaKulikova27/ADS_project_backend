@@ -13,24 +13,29 @@ class AccountController extends Controller
     public function create(Request $request)
     {
         $request->validate([
-            'login' => 'required|string|unique:users,login',
+            'login' => 'required|string',
             'password' => 'required|string|min:8',
+            'name' => 'required|string'
         ]);
 
         $login = $request->login;
-
-        // Проверяем, существует ли пользователь с таким email
         $existingUser = User::where('login', $login)->first();
 
         if ($existingUser) {
-            return response()->json(['error' => 'Пользователь с таким login уже существует.'], 409);
+            return response()->json([
+                'error_message' => 'User with this login already exists',
+                'successful_register' => false            
+            ]);
         }
 
         $user = User::create([
             'login' => $request->login,
             'password' => Hash::make($request->password),
             'token' => null,
-            'role' => 1
+            'role' => 1, 
+            'token_last_used_at' => NOW(),
+            'name' => $request->name,
+            'address' => $request->address
         ]);
 
         $token = $user->createToken('auth_token');
@@ -51,19 +56,31 @@ class AccountController extends Controller
         ]);
 
         $credentials = $request->only('login', 'password');
+        $user = Auth::attempt($credentials);
 
-        if (!User::attempt($credentials)) {
+        if (Auth::attempt($credentials)) {
+            $user = Auth::user()->makeHidden(['id']);
+            $token = $user->createToken('auth_token');
+            $user->token = $token;
             return response()->json([
-                'message' => 'Unauthorized',
-            ], 401);
+                'message' => 'Успешный вход', 
+                'user' => $user,
+                'access_token' => $token,
+                'successful_login' => true
+            ]);
+        } else {
+            return response()->json([
+                'message' => 'Неверные учетные данные',
+                'successful_login' => false
+        ]);
         }
+    }
 
-        $user = $request->user();
-
-        $token = $user->createToken('auth_token');
-        $user->token = $token;
-
+    public function logout(Request $request)
+    {
+        $request->user()->token()->revoke();
         return response()->json([
+            'message' => 'User logged out successfully',
             'access_token' => $token
         ]);
     }

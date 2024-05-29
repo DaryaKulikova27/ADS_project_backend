@@ -19,24 +19,24 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'login' => $this->faker->login(),
+            'login' => $this->faker->unique()->safeEmail,
             'password' => Hash::make('password'),
             'token' => $this->faker->uuid(),
             'role' => 1,
-            'name' => $this->faker->name(),
             'token_last_used_at' => $this->faker->dateTimeThisDecade(),
-            'address' => $this->faker->address()
+            'name' => $this->faker->name(),
+            'address' => $this->faker->streetAddress()
         ];
     }
 
-    // public function withRole($role)
-    // {
-    //     return $this->state(function (array $attributes) use ($role) {
-    //         return [
-    //             'role' => $role,
-    //         ];
-    //     });
-    // }
+    public function withRole($role)
+    {
+        return $this->state(function (array $attributes) use ($role) {
+            return [
+                'role' => $role,
+            ];
+        });
+    }
 
     // /**
     //  * Indicate that the model's email address should be unverified.

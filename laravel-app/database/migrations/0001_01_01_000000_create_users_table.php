@@ -20,6 +20,7 @@ return new class extends Migration
             $table->dateTime('token_last_used_at')->nullable();
             $table->string('name');
             $table->string('address')->nullable();
+            $table->index(['token', 'login']);
             $table->timestamps();
         });
 
