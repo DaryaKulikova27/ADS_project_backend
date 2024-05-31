@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -22,10 +23,7 @@ class AccountController extends Controller
         $existingUser = User::where('login', $login)->first();
 
         if ($existingUser) {
-            return response()->json([
-                'error_message' => 'User with this login already exists',
-                'successful_register' => false            
-            ]);
+            return BaseController::sendError('User with this login already exists');
         }
 
         $user = User::create([
@@ -33,7 +31,8 @@ class AccountController extends Controller
             'password' => Hash::make($request->password),
             'token' => null,
             'role' => 1, 
-            'token_last_used_at' => NOW(),
+            'executor_id' => null,
+            'last_update_token' => NOW(),
             'name' => $request->name,
             'address' => $request->address
         ]);
@@ -42,10 +41,8 @@ class AccountController extends Controller
         $user->token = $token;
 
         // отправка токена в ответе
-        return response()->json([
-            'access_token' => $token,
-            'successful_register' => true
-        ]);
+        return BaseController::sendResponse(["access_token" => $token], 'Successful create account!');
+        
     }
 
     public function login(Request $request)
@@ -62,17 +59,9 @@ class AccountController extends Controller
             $user = Auth::user()->makeHidden(['id']);
             $token = $user->createToken('auth_token');
             $user->token = $token;
-            return response()->json([
-                'message' => 'Успешный вход', 
-                'user' => $user,
-                'access_token' => $token,
-                'successful_login' => true
-            ]);
+            return BaseController::sendResponse(["user" => $user, "access_token" => $token], 'Successful login!');
         } else {
-            return response()->json([
-                'message' => 'Неверные учетные данные',
-                'successful_login' => false
-        ]);
+            return BaseController::sendError('Неверные учетные данные');
         }
     }
 

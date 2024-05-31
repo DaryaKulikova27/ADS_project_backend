@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('password');
             $table->string('token')->nullable();
             $table->integer('role')->nullable();
-            $table->dateTime('token_last_used_at')->nullable();
+            $table->string('executor_id')->nullable();
+            $table->dateTime('last_update_token')->nullable();
             $table->string('name');
             $table->string('address')->nullable();
             $table->index(['token', 'login']);

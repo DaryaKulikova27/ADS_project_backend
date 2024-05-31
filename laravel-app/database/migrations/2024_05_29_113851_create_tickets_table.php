@@ -14,18 +14,18 @@ return new class extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->integer('dispatcher_id')->default(1);
-            $table->integer('client_id');
+            $table->integer('client_id')->nullable();
             $table->integer('executor_id')->nullable();
-            $table->boolean('is_paid');
+            $table->boolean('is_paid')->nullable();
             $table->text('description')->nullable();
             $table->string('ticket_number');
-            $table->dateTime('start_work');
-            $table->dateTime('end_work');
-            $table->string('address');
+            $table->dateTime('start_work')->nullable();
+            $table->dateTime('end_work')->nullable();
+            $table->string('address')->nullable();
             $table->string('title');
-            $table->string('phone_client');
-            $table->integer('status');
-            $table->dateTime('created_at');
+            $table->string('phone_client')->nullable();
+            $table->integer('status')->nullable();
+            $table->dateTime('created_ticket_at');
             $table->timestamps();
         });
     }

@@ -23,9 +23,10 @@ class UserFactory extends Factory
             'password' => Hash::make('password'),
             'token' => $this->faker->uuid(),
             'role' => 1,
-            'token_last_used_at' => $this->faker->dateTimeThisDecade(),
+            'last_update_token' => $this->faker->dateTimeThisDecade(),
             'name' => $this->faker->name(),
-            'address' => $this->faker->streetAddress()
+            'address' => $this->faker->streetAddress(),
+            'executor_id' => null
         ];
     }
 
@@ -34,6 +35,7 @@ class UserFactory extends Factory
         return $this->state(function (array $attributes) use ($role) {
             return [
                 'role' => $role,
+                'executor_id' => $role === 2 ? Str::random(10) : null
             ];
         });
     }

@@ -18,9 +18,10 @@ class User extends Authenticatable
         'password',
         'token',
         'role',
-        'token_last_used_at',
+        'last_update_token',
         'name',
-        'address'
+        'address',
+        'executor_id'
     ];
 
 
@@ -41,7 +42,7 @@ class User extends Authenticatable
 
     public function createToken() {
         $this->token = $this->createUuidToken();
-        $this->token_last_used_at = now();
+        $this->last_update_token = now();
         $this->save();
         return $this->token;
     }
