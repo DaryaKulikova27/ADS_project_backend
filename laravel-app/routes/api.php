@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\CustomerController;
 use App\Http\Controllers\Api\InvoiceController;
 use App\Http\Controllers\Api\AccountController;
 use App\Http\Controllers\Api\TicketController;
+use App\Http\Controllers\Api\WorksController;
 use App\Http\Middleware\CheckTokenUpdate;
 
 /*
@@ -45,6 +46,11 @@ Route::prefix('tickets')->group(function () {
     Route::post('all', [TicketController::class, 'getAllTickets'])->middleware(CheckTokenUpdate::class);
     Route::post('appointExecutor', [TicketController::class, 'appointExecutor'])->middleware(CheckTokenUpdate::class);
     Route::post('queue', 'TicketController@allPartisipantTickets'); //Participant data from queue_tickets then clear it
+});
+
+// Worklist Rppt
+Route::prefix('worklist')->group(function() {
+    Route::post('get', [WorksController::class, 'index'])->middleware(CheckTokenUpdate::class);
 });
 
 // Route::prefix('v1')->group(function(){

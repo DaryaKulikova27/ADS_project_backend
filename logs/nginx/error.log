@@ -866,3 +866,212 @@
 2024/05/31 15:20:39 [notice] 1#1: worker process 12 exited with code 0
 2024/05/31 15:20:39 [notice] 1#1: worker process 14 exited with code 0
 2024/05/31 15:20:39 [notice] 1#1: exit
+2024/05/31 16:08:10 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:08:11 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:08:11 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:08:12 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:08:13 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:08:14 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:08:18 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:08:24 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:08:37 [notice] 1#1: using the "epoll" event method
+2024/05/31 16:08:37 [notice] 1#1: nginx/1.25.5
+2024/05/31 16:08:37 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2024/05/31 16:08:37 [notice] 1#1: OS: Linux 6.6.26-linuxkit
+2024/05/31 16:08:37 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/05/31 16:08:37 [notice] 1#1: start worker processes
+2024/05/31 16:08:37 [notice] 1#1: start worker process 8
+2024/05/31 16:08:37 [notice] 1#1: start worker process 9
+2024/05/31 16:08:37 [notice] 1#1: start worker process 10
+2024/05/31 16:08:37 [notice] 1#1: start worker process 11
+2024/05/31 16:08:37 [notice] 1#1: start worker process 12
+2024/05/31 16:08:37 [notice] 1#1: start worker process 13
+2024/05/31 16:08:37 [notice] 1#1: start worker process 14
+2024/05/31 16:08:37 [notice] 1#1: start worker process 15
+2024/05/31 16:18:53 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:18:53 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:18:54 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:18:54 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:18:55 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:18:57 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:19:00 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:19:07 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:19:20 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/05/31 16:19:45 [notice] 1#1: using the "epoll" event method
+2024/05/31 16:19:45 [notice] 1#1: nginx/1.25.5
+2024/05/31 16:19:45 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2024/05/31 16:19:45 [notice] 1#1: OS: Linux 6.6.26-linuxkit
+2024/05/31 16:19:45 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/05/31 16:19:45 [notice] 1#1: start worker processes
+2024/05/31 16:19:45 [notice] 1#1: start worker process 8
+2024/05/31 16:19:45 [notice] 1#1: start worker process 9
+2024/05/31 16:19:45 [notice] 1#1: start worker process 10
+2024/05/31 16:19:45 [notice] 1#1: start worker process 11
+2024/05/31 16:19:45 [notice] 1#1: start worker process 12
+2024/05/31 16:19:45 [notice] 1#1: start worker process 13
+2024/05/31 16:19:45 [notice] 1#1: start worker process 14
+2024/05/31 16:19:45 [notice] 1#1: start worker process 15
+2024/05/31 16:20:17 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/05/31 16:20:17 [notice] 9#9: gracefully shutting down
+2024/05/31 16:20:17 [notice] 9#9: exiting
+2024/05/31 16:20:17 [notice] 10#10: gracefully shutting down
+2024/05/31 16:20:17 [notice] 11#11: gracefully shutting down
+2024/05/31 16:20:17 [notice] 12#12: gracefully shutting down
+2024/05/31 16:20:17 [notice] 13#13: gracefully shutting down
+2024/05/31 16:20:17 [notice] 14#14: gracefully shutting down
+2024/05/31 16:20:17 [notice] 15#15: gracefully shutting down
+2024/05/31 16:20:17 [notice] 8#8: gracefully shutting down
+2024/05/31 16:20:17 [notice] 9#9: exit
+2024/05/31 16:20:17 [notice] 10#10: exiting
+2024/05/31 16:20:17 [notice] 10#10: exit
+2024/05/31 16:20:17 [notice] 11#11: exiting
+2024/05/31 16:20:17 [notice] 11#11: exit
+2024/05/31 16:20:17 [notice] 12#12: exiting
+2024/05/31 16:20:17 [notice] 13#13: exiting
+2024/05/31 16:20:17 [notice] 14#14: exiting
+2024/05/31 16:20:17 [notice] 15#15: exiting
+2024/05/31 16:20:17 [notice] 8#8: exiting
+2024/05/31 16:20:17 [notice] 8#8: exit
+2024/05/31 16:20:17 [notice] 12#12: exit
+2024/05/31 16:20:17 [notice] 13#13: exit
+2024/05/31 16:20:17 [notice] 14#14: exit
+2024/05/31 16:20:17 [notice] 15#15: exit
+2024/05/31 16:20:17 [notice] 1#1: signal 17 (SIGCHLD) received from 9
+2024/05/31 16:20:17 [notice] 1#1: worker process 9 exited with code 0
+2024/05/31 16:20:17 [notice] 1#1: signal 29 (SIGIO) received
+2024/05/31 16:20:17 [notice] 1#1: signal 17 (SIGCHLD) received from 12
+2024/05/31 16:20:17 [notice] 1#1: worker process 8 exited with code 0
+2024/05/31 16:20:17 [notice] 1#1: worker process 10 exited with code 0
+2024/05/31 16:20:17 [notice] 1#1: worker process 12 exited with code 0
+2024/05/31 16:20:17 [notice] 1#1: signal 29 (SIGIO) received
+2024/05/31 16:20:17 [notice] 1#1: signal 17 (SIGCHLD) received from 8
+2024/05/31 16:20:17 [notice] 1#1: signal 17 (SIGCHLD) received from 15
+2024/05/31 16:20:17 [notice] 1#1: worker process 11 exited with code 0
+2024/05/31 16:20:17 [notice] 1#1: worker process 13 exited with code 0
+2024/05/31 16:20:17 [notice] 1#1: worker process 15 exited with code 0
+2024/05/31 16:20:17 [notice] 1#1: signal 29 (SIGIO) received
+2024/05/31 16:20:17 [notice] 1#1: signal 17 (SIGCHLD) received from 11
+2024/05/31 16:20:17 [notice] 1#1: signal 17 (SIGCHLD) received from 14
+2024/05/31 16:20:17 [notice] 1#1: worker process 14 exited with code 0
+2024/05/31 16:20:17 [notice] 1#1: exit
+2024/06/01 12:21:59 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:22:01 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:22:01 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:22:02 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:22:03 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:22:04 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:22:08 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:22:15 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:22:27 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:22:53 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:23:45 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:24:45 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:25:45 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:26:45 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:27:45 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:28:45 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:29:46 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:30:46 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:31:46 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:32:46 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:33:46 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:34:46 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:35:46 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:36:47 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:37:47 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:38:47 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:39:47 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:40:47 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:41:47 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:42:47 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:43:48 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:44:48 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:45:48 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:46:48 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:47:48 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:48:48 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:49:48 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:50:49 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:51:49 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:52:49 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:53:49 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:54:49 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:55:49 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:56:49 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:57:50 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 12:58:50 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 13:15:14 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 13:33:38 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 14:07:41 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 14:08:42 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 14:09:42 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 14:26:37 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 14:44:13 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 15:02:19 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 15:20:48 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 15:37:21 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:10:15 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:14:00 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:15:00 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:16:00 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:17:00 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:18:00 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:19:00 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:20:00 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:21:01 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:22:01 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:23:01 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:24:01 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:25:01 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:26:01 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:27:02 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:28:02 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:29:02 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:30:02 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:31:02 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:32:02 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:33:03 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:34:03 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:35:03 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:36:03 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:37:03 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:38:03 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:39:03 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:40:04 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:41:04 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:42:04 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:43:04 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:44:04 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:45:04 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:46:04 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:47:05 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:48:05 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:49:05 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:50:05 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:51:05 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:52:05 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:53:06 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:54:06 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:55:06 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:56:06 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:57:06 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:58:07 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 16:59:07 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 17:00:07 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 17:01:07 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 17:02:07 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 17:03:07 [emerg] 1#1: host not found in upstream "laravel-docker" in /etc/nginx/conf.d/web_app.conf:13
+2024/06/01 17:04:07 [notice] 1#1: using the "epoll" event method
+2024/06/01 17:04:07 [notice] 1#1: nginx/1.25.5
+2024/06/01 17:04:07 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2024/06/01 17:04:07 [notice] 1#1: OS: Linux 6.6.26-linuxkit
+2024/06/01 17:04:07 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/06/01 17:04:07 [notice] 1#1: start worker processes
+2024/06/01 17:04:07 [notice] 1#1: start worker process 8
+2024/06/01 17:04:07 [notice] 1#1: start worker process 9
+2024/06/01 17:04:07 [notice] 1#1: start worker process 10
+2024/06/01 17:04:07 [notice] 1#1: start worker process 11
+2024/06/01 17:04:07 [notice] 1#1: start worker process 12
+2024/06/01 17:04:07 [notice] 1#1: start worker process 13
+2024/06/01 17:04:07 [notice] 1#1: start worker process 14
+2024/06/01 17:04:07 [notice] 1#1: start worker process 15

@@ -45,8 +45,59 @@ class TicketController extends Controller
             ]
         );
         $ticket->save();
+
+        // $orders = Arr::get($request, ('additionalData.orders'));
+        // if (!empty($orders)) {
+        //     foreach ($orders as $order) {
+        //         $ticket->additional_data()->updateOrCreate(
+        //             ['key' => $key],
+        //             ['value' => $value]
+        //         );
+        //     }
+        // }
+
+        //$this->parseOrders($request, $ticket->id, $client_id->client_id);
+
         return BaseController::sendResponse(["ticketNumber" => $ticket->ticket_number], 'Заявка создана!');
     }
+
+    private static function parseOrders($request, $ticket_id, $client_id)
+    {
+      // проверяем присутсвие заказов в бд, если нет, сносим
+      if(!empty(Arr::get($request, ('additional_data.orders')))) {
+        try {
+          $orders = Arr::get($request, ('additional_data.orders'));
+          foreach ($orders as $order) {
+            // проверяем присутсвие работ в бд, если нет, сносим
+            foreach ($order['works'] as $workKey => $workValue) {
+              Log::channel('worklist_info')->info('Start parsing worklist data', [$workValue['work_external_id'], $client_id]);
+              $checkWork = Works::workExists($workValue['work_external_id'], $client_id);
+              if($checkWork == false) {
+                Works::addWorkFromIncommingTicket($workValue, $client_id);
+              }
+            }
+
+            $saveOrders = new Order;
+            $saveOrders = $saveOrders->addOrUpdate($order, $ticket_id);
+
+            $saveWorksInOrders = new WorksInOrder;
+            $saveWorksInOrders = $saveWorksInOrders->addOrUpdate($order, $saveOrders);
+          }
+        } catch (\Throwable $e) {
+          Log::channel('worklist_error')->error('parseOrders', array(
+            'message' => 'Произошла ошибка при создание или обновление:' . $e->getMessage(),
+            'ticket_id' => $ticket_id,
+            'IP' => request()->ip(),
+            'divice' => request()->userAgent()
+        ));
+          return false;
+        }
+
+        return true;
+      }
+      return false;
+    }
+
 
     public function getAllTickets(Request $request) {
         $userRole = User::where('token', $request->token)->first()->role;
