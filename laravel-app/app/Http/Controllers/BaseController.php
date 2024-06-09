@@ -47,7 +47,7 @@ class BaseController extends Controller
      * default erro response - code 300
      * @return \Illuminate\Http\Response
      */
-    public static function sendError($errorMessages = [], $code = 300)
+    public static function sendError($errorMessages = "", $code = 300)
     {
     	$response = [
             'success' => false,
@@ -58,7 +58,7 @@ class BaseController extends Controller
         ];
 
         if(!empty($errorMessages)){
-            $response['data'] = $errorMessages;
+            $response['error']['message'] = $errorMessages;
         }
 
         return response()->json($response, 200);

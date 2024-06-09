@@ -14,7 +14,11 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         //$middleware->add(new \App\Http\Middleware\CheckTokenUpdate());
-        $middleware->append(CheckTokenUpdate::class);
+        //$middleware->append(CheckTokenUpdate::class);
+
+        // $middleware->use([
+        //     CheckTokenUpdate::class
+        // ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
@@ -62,13 +63,6 @@ class TicketController extends Controller
           $orders = Arr::get($request, ('additionalData.orders'));
 
           foreach ($orders as $order) {
-            // foreach ($order['works'] as $workKey => $workValue) {
-            //   $checkWork = Works::workExists($workValue['work_external_id'], $client_id);
-            //   if($checkWork == false) {
-            //     Works::addWorkFromIncommingTicket($workValue, $client_id);
-            //   }
-            // }
-
             $saveOrders = new Orders;
             $saveOrders = $saveOrders->addOrUpdate($order, $ticket_id);
 
@@ -84,9 +78,16 @@ class TicketController extends Controller
       return false;
     }
 
+    private function getAdditinalData() {
+        
+    }
+
 
     public function getAllTickets(Request $request) {
         $userRole = User::where('token', $request->token)->first()->role;
+        $result = [];
+        $additionalData = [];
+
         if ($userRole === 1) {
             $tickets = Ticket::where('client_id', User::where('token', $request->token)->first()->id)->get();
         } elseif ($userRole === 2) {
@@ -95,7 +96,32 @@ class TicketController extends Controller
             $tickets = Ticket::all();
         }
 
-        return BaseController::sendResponse($tickets, 'Заявки получены!');
+        foreach ($tickets as $ticket) {
+            $currentTicketData = [];
+            $currentTicketData = [
+                'ticketNumber' => $ticket->ticket_number,
+                'title' => $ticket->title,
+                'description' => $ticket->description,
+                'address' => $ticket->address,
+                'phoneClient' => $ticket->phone_client,
+                'isPaid' => $ticket->is_paid,
+                'status' => $ticket->status,
+                'createdAt' => Helper::apiTime($ticket->created_ticket_at),
+                'startWork' => Helper::apiTime($ticket->start_work),
+                'endWork' => Helper::apiTime($ticket->end_work),
+                'executorId' => $ticket->executor_id,
+                'clientId' => $ticket->client_id,
+                'dispatcherId' => $ticket->dispatcher_id
+            ];
+
+            $result['tickets'][] = $currentTicketData;
+        }
+
+        if (empty($result)) {
+            $result = (object)$result;
+        }
+
+        return BaseController::sendResponse($result);
     }
 
     public function appointExecutor(Request $request) {

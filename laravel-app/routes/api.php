@@ -35,23 +35,29 @@ use App\Http\Middleware\CheckTokenUpdate;
 Route::get('customers', [CustomerController::class, 'index']);
 
 // Авторизация
-Route::post('register', [AccountController::class, 'create']);
-Route::post('login', [AccountController::class, 'login']);
+Route::post('register', [AccountController::class, 'create'])->withoutMiddleware([CheckTokenUpdate::class]);
+Route::post('signIn', [AccountController::class, 'signIn'])->withoutMiddleware([CheckTokenUpdate::class]);
 
 //Tickets Route
-Route::prefix('tickets')->group(function () {
-    Route::post('create', [TicketController::class, 'createOrUpdateTicket'])->middleware(CheckTokenUpdate::class);
-    Route::post('update', [TicketController::class, 'createOrUpdateTicket'])->middleware(CheckTokenUpdate::class);
-    //Route::post('singleById', 'TicketController@getTicket');
-    Route::post('all', [TicketController::class, 'getAllTickets'])->middleware(CheckTokenUpdate::class);
-    Route::post('appointExecutor', [TicketController::class, 'appointExecutor'])->middleware(CheckTokenUpdate::class);
-    Route::post('queue', 'TicketController@allPartisipantTickets'); //Participant data from queue_tickets then clear it
+
+Route::middleware([CheckTokenUpdate::class])->group(function() {
+    Route::prefix('tickets')->group(function () {
+        Route::post('create', [TicketController::class, 'createOrUpdateTicket']);
+        Route::post('update', [TicketController::class, 'createOrUpdateTicket']);
+        //Route::post('singleById', 'TicketController@getTicket');
+        Route::post('all', [TicketController::class, 'getAllTickets']);
+        Route::post('appointExecutor', [TicketController::class, 'appointExecutor']);
+        Route::post('queue', 'TicketController@allPartisipantTickets'); //Participant data from queue_tickets then clear it
+    });
+    
+    // Worklist Root
+    Route::prefix('worklist')->group(function() {
+        Route::post('get', [WorksController::class, 'index']);
+    });
 });
 
-// Worklist Rppt
-Route::prefix('worklist')->group(function() {
-    Route::post('get', [WorksController::class, 'index'])->middleware(CheckTokenUpdate::class);
-});
+
+
 
 // Route::prefix('v1')->group(function(){
 //     // paid tickets

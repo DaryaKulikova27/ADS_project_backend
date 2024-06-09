@@ -23,7 +23,7 @@ class AccountController extends Controller
         $existingUser = User::where('login', $login)->first();
 
         if ($existingUser) {
-            return BaseController::sendError('User with this login already exists');
+            return BaseController::sendError();
         }
 
         $user = User::create([
@@ -45,7 +45,7 @@ class AccountController extends Controller
         
     }
 
-    public function login(Request $request)
+    public function signIn(Request $request)
     {
         $request->validate([
             'login' => 'required|string',

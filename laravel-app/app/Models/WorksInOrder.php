@@ -7,7 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Works;
 use Illuminate\Database\QueryException;
 
-// use Illuminate\Database\Eloquent\Model;
+/**
+ * @property int $id
+ * @property int $order_id
+ * @property string $work_id
+ * @property string $price
+ * @property string $amount
+ */
 
 class WorksInOrder extends Model
 {
@@ -17,6 +23,8 @@ class WorksInOrder extends Model
 
     public function addOrUpdate($data, $order_id)
     {   
+        echo($order_id . "\n");
+        dd($data);
         $worksInOrder = $data['works'];
         try {
             foreach ($worksInOrder as $works) {
@@ -30,8 +38,8 @@ class WorksInOrder extends Model
                     'price' => $works['price'],
                     'amount' => $works['amount']
                 ];
-                self::updateOrCreate($checkWork, $saveWork);
-                self::save();
+                $saveWorkInOrder = self::updateOrCreate($checkWork, $saveWork);
+                $saveWorkInOrder->save();
             }
 
             return true;

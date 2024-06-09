@@ -12,25 +12,6 @@ class CheckTokenUpdate
 {
     public function handle($request, Closure $next)
     {
-        // if (Auth::check()) {
-        //     echo("i am here");
-        //     $user = Auth::user();
-        //     $lastUpdate = $user->last_update_token;
-
-        //     if ($lastUpdate) {
-        //         $currentTime = Carbon::now();
-        //         $lastUpdateTime = Carbon::parse($lastUpdate);
-
-        //         if ($currentTime->diffInHours($lastUpdateTime) > 24) {
-        //             // Токен должен быть обновлен
-        //             // Здесь вы можете добавить логику обновления токена или перенаправить пользователя
-        //             return BaseController::sendError('Token expired. Please login again.', 301);
-        //         }
-        //     }
-        // }
-
-        //$token_last_update = User::where('token',  $request->token)->first()->last_update_token;
-    
 
         $user = User::where('token',  $request->token)->first();
 
@@ -44,18 +25,6 @@ class CheckTokenUpdate
         } else {
             return BaseController::sendError('Unauthorized user', 300);
         }
-        
-
-        // if ($token_last_update) {
-        //     $currentTime = Carbon::now();
-        //     $lastUpdateTime = Carbon::parse($token_last_update);
-
-        //     if ($currentTime->diffInHours($lastUpdateTime) > 24) {
-        //         // Токен должен быть обновлен
-        //         // Здесь вы можете добавить логику обновления токена или перенаправить пользователя
-        //         return BaseController::sendError('Token expired. Please login again.', 301);
-        //     }
-        // } 
 
         return $next($request);
     }
