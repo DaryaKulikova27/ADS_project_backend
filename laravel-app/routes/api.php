@@ -20,23 +20,12 @@ use App\Http\Middleware\CheckTokenUpdate;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
-// Route::get('/user', function (Request $request) {
-//     return $request->user();
-// })->middleware('auth:sanctum');
-
-// Route::get('customers', function (Request $request) {
-//     return $request->customer();
-// })->middleware('auth:sanctum');
-
 Route::get('customers', [CustomerController::class, 'index']);
 
 // Авторизация
 Route::post('register', [AccountController::class, 'create'])->withoutMiddleware([CheckTokenUpdate::class]);
 Route::post('signIn', [AccountController::class, 'signIn'])->withoutMiddleware([CheckTokenUpdate::class]);
+Route::post('logout', [AccountController::class, 'logout'])->withoutMiddleware([CheckTokenUpdate::class]);
 
 //Tickets Route
 
@@ -44,7 +33,6 @@ Route::middleware([CheckTokenUpdate::class])->group(function() {
     Route::prefix('tickets')->group(function () {
         Route::post('create', [TicketController::class, 'createOrUpdateTicket']);
         Route::post('update', [TicketController::class, 'createOrUpdateTicket']);
-        //Route::post('singleById', 'TicketController@getTicket');
         Route::post('all', [TicketController::class, 'getAllTickets']);
         Route::post('appointExecutor', [TicketController::class, 'appointExecutor']);
         Route::post('queue', 'TicketController@allPartisipantTickets'); //Participant data from queue_tickets then clear it

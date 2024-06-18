@@ -17,7 +17,26 @@ class WorksController extends Controller
      */
     public function index(Request $request)
     {
-        return Works::all();
+        $result = [];
+        $works = Works::all();
+        foreach ($works as $work) {
+            $currentWorksData = [];
+            $currentWorksData = [
+                'work_external_id' => $work->work_external_id,
+                'name' => $work->name,
+                'price' => $work->price,
+                'parent' => $work->parent,
+                'is_folder' => $work->is_folder == 1 ? true : false
+            ];
+
+            $result['works'][] = $currentWorksData;
+        }
+
+        if (empty($result)) {
+            $result = (object)$result;
+        }
+
+        return BaseController::sendResponse($result);
     }
 
     /**

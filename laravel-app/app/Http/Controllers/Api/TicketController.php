@@ -104,14 +104,16 @@ class TicketController extends Controller
                 'description' => $ticket->description,
                 'address' => $ticket->address,
                 'phoneClient' => $ticket->phone_client,
-                'isPaid' => $ticket->is_paid,
+                'isPaid' => $ticket->is_paid == 1 ? true : false,
                 'status' => $ticket->status,
                 'createdAt' => Helper::apiTime($ticket->created_ticket_at),
                 'startWork' => Helper::apiTime($ticket->start_work),
                 'endWork' => Helper::apiTime($ticket->end_work),
                 'executorId' => $ticket->executor_id,
                 'clientId' => $ticket->client_id,
-                'dispatcherId' => $ticket->dispatcher_id
+                'dispatcherId' => $ticket->dispatcher_id,
+                'executor_name' => $ticket->executor_id != null ? User::where('id', $ticket->executor_id)->first()->name : null,
+                'client_name' => $ticket->client_id != null ? User::where('id', $ticket->client_id)->first()->name : null
             ];
 
             $result['tickets'][] = $currentTicketData;
@@ -127,6 +129,7 @@ class TicketController extends Controller
     public function appointExecutor(Request $request) {
         $ticket = Ticket::where('ticket_number', Arr::get($request, ('ticketNumber')))->first();
         $ticket->executor_id = User::where('executor_id', Arr::get($request, ('executorId')))->first()->id;
+        $ticket->status = 2;
         $ticket->save();
         return BaseController::sendResponse(["ticketNumber" => $ticket->ticket_number], 'Исполнитель назначен!');
     }

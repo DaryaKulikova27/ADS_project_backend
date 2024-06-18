@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
     {
         User::factory()
             ->count(1)
-            ->withRole(0)
+            ->dispatcher()
             ->create();
 
         User::factory()
@@ -24,7 +24,12 @@ class UserSeeder extends Seeder
             ->create();
 
         User::factory()
-            ->count(2)
+            ->count(1)
+            ->executor()
+            ->create();
+
+        User::factory()
+            ->count(1)
             ->withRole(2)
             ->create();
     }

@@ -40,6 +40,29 @@ class UserFactory extends Factory
         });
     }
 
+    public function executor()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'role' => 2,
+                'login' => 'executor',
+                'password' => Hash::make('123'),
+                'executor_id' => Str::random(10)
+            ];
+        });
+    }
+
+    public function dispatcher()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'role' => 0,
+                'login' => 'dispatcher',
+                'password' => Hash::make('123')
+            ];
+        });
+    }
+
     // /**
     //  * Indicate that the model's email address should be unverified.
     //  */

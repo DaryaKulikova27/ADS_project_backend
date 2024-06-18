@@ -15,7 +15,7 @@ class AccountController extends Controller
     {
         $request->validate([
             'login' => 'required|string',
-            'password' => 'required|string|min:8',
+            'password' => 'required|string',
             'name' => 'required|string'
         ]);
 
@@ -49,7 +49,7 @@ class AccountController extends Controller
     {
         $request->validate([
             'login' => 'required|string',
-            'password' => 'required|string|min:8',
+            'password' => 'required|string',
         ]);
 
         $credentials = $request->only('login', 'password');
@@ -67,10 +67,9 @@ class AccountController extends Controller
 
     public function logout(Request $request)
     {
-        $request->user()->token()->revoke();
-        return response()->json([
-            'message' => 'User logged out successfully',
-            'access_token' => $token
-        ]);
+        $user = User::where('token', $request->token)->first();
+        $user->token = null;
+        $user->save();
+        return BaseController::sendResponse(["message" => 'User logged out successfully'], 'Successful logout!');
     }
 }
