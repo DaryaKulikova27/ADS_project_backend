@@ -38,7 +38,7 @@ class TicketController extends Controller
             ['dispatcher_id' => 1, 
             'client_id' => $userId,
             'executor_id' => empty(Arr::get($request, ('ticket.executorId'))) ? null : Arr::get($request, ('ticket.executorId')),
-            'is_paid' => Arr::get($request, ('ticket.isPaid')) === null ? false : Arr::get($request, ('ticket.isPaid')),
+            'is_paid' => Arr::get($request, ('ticket.isPaid')) === null ? false : $this->getIsPaidValue($request),
             'description' => Arr::get($request, ('ticket.description')),
             'start_work' => empty(Arr::get($request, ('ticket.startWork'))) ? null : Arr::get($request, ('ticket.startWork')),
             'end_work' => empty(Arr::get($request, ('ticket.endWork'))) ? null : Arr::get($request, ('ticket.endWork')),
@@ -54,6 +54,11 @@ class TicketController extends Controller
         $this->parseOrders($request, $ticket->ticket_number);
 
         return BaseController::sendResponse(["ticketNumber" => $ticket->ticket_number], 'Заявка создана!');
+    }
+
+    private function getIsPaidValue(Request $request) {
+        if (Arr::get($request, ('ticket.isPaid')) == true) return 1;
+        return 0;
     }
 
     private static function parseOrders($request, $ticket_id)
@@ -116,6 +121,11 @@ class TicketController extends Controller
                 'client_name' => $ticket->client_id != null ? User::where('id', $ticket->client_id)->first()->name : null
             ];
 
+            $ordersData = Helper::fillOrdersAdditionalData($ticket->id, $currentTicketData['ticketNumber']);
+            if($ordersData !== false){
+                $additionalData['orders'][] = $ordersData;
+            }
+
             $result['tickets'][] = $currentTicketData;
         }
 
@@ -123,7 +133,7 @@ class TicketController extends Controller
             $result = (object)$result;
         }
 
-        return BaseController::sendResponse($result);
+        return BaseController::sendResponse($result, [], $additionalData);
     }
 
     public function appointExecutor(Request $request) {
@@ -132,6 +142,27 @@ class TicketController extends Controller
         $ticket->status = 2;
         $ticket->save();
         return BaseController::sendResponse(["ticketNumber" => $ticket->ticket_number], 'Исполнитель назначен!');
+    }
+
+    public function getAllExecutors(Request $request) {
+        $executors = User::where('role', 2)->get();
+        $result = [];
+
+        foreach ($executors as $executor) {
+            $currentExecutorData = [];
+            $currentExecutorData = [
+                'executor_id' => $executor->executor_id,
+                'name' => $executor->name
+            ];
+
+            $result['executors'][] = $currentExecutorData;
+        }
+
+        if (empty($result)) {
+            $result = (object)$result;
+        }
+
+        return BaseController::sendResponse($result);
     }
 
     /**

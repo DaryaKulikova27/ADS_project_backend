@@ -10,6 +10,7 @@ class Works extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'work_external_id',
         'name',
         'price',

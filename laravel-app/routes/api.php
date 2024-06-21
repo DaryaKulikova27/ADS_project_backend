@@ -35,6 +35,7 @@ Route::middleware([CheckTokenUpdate::class])->group(function() {
         Route::post('update', [TicketController::class, 'createOrUpdateTicket']);
         Route::post('all', [TicketController::class, 'getAllTickets']);
         Route::post('appointExecutor', [TicketController::class, 'appointExecutor']);
+        Route::post('getAllExecutors', [TicketController::class, 'getAllExecutors']);
         Route::post('queue', 'TicketController@allPartisipantTickets'); //Participant data from queue_tickets then clear it
     });
     

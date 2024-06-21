@@ -24,14 +24,17 @@ class WorksInOrder extends Model
     public function addOrUpdate($data, $order_id)
     {   
         echo($order_id . "\n");
-        dd($data);
         $worksInOrder = $data['works'];
         try {
             foreach ($worksInOrder as $works) {
-                $work_id = Works::where('work_external_id', $works['work_external_id'])->first()->id;
+                $work = Works::where('work_external_id', $works['work_external_id'])
+                                ->first();
+
+                echo $work->id . "\n";
+
                 $checkWork = [
-                    'work_id' => $work_id,
-                    'order_id' => $order_id
+                    'order_id' => $order_id,
+                    'work_id' => $work->id
                 ];
     
                 $saveWork = [

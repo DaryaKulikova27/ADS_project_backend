@@ -17,7 +17,7 @@ class Orders extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['ticket_numer', 'order_sum', 'works_amount'];
+    protected $fillable = ['id' ,'ticket_numer', 'order_sum', 'works_amount'];
 
     public function addOrUpdate($data, $ticket_id)
     {
